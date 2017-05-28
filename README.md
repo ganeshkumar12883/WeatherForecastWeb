@@ -1,13 +1,18 @@
 # WeatherForecastWeb
 Iterate over a sample dataset of temperatures records to determine the weather forecast in a particular location
 
-A Java application written in Java 1.8 to calculate the weather conditions of a place from a pre-calculated data readings over the place for a year. The application is written in specific modules serving each of their purpose in the flow. Since the pre-determined test data is used froma file, the moduels fall as belwo:
+A Java application written in Java 1.8 using Spring & Angular JS to calculate the weather conditions of a place from a pre-calculated data readings over the place for a year. The application is written in specific modules serving each of their purpose in the flow. Since the pre-determined test data is used from a file inside the application context, the moduels fall as below:
 
-  * reader - to read the file data line by line.
-  * parser - parse the read data into a pojo for each line.
-  * generator - parsed data is used to generate forecast of all available data in a file on current date or any given date.
-  * utils - Static Utility functions to assist in the generation process.
-  * model - Underlying model objects used to traverse the data and generate the forecast output
+ * Controller - Rest Controller to expose the rest services providing the json of the weather data of the location required   for current date/specific date.
+ * Service - Spring Service to access the underlying core module to fetch the weather forecast data.
+ * Core - The actual manipulation of weather data from existing data for the requireed location (& date). The core contains the below modules.
+   * reader - to read the file data line by line.
+   * parser - parse the read data into a pojo for each line.
+   * generator - parsed data is used to generate forecast of all available data in a file on current date or any given date.
+   * utils - Static Utility functions to assist in the generation process.
+   * model - Underlying model objects used to traverse the data and generate the forecast output
+ * Web module - Using JSP and AngularJS. The angularJS module has a controller, service and app js files to invoke the rest service from the controller module of the application.
+
 
 Algorithm Used for weather parameters determination:
 The yearly summary data of 11 cities of Australia is chosen for this application.
