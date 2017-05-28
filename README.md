@@ -34,3 +34,6 @@ The application is written in Java 1.8, Spring 4.3.1, Angular 1.4.6 and maven 3.
 The war file(WeatherForecast.war) is available in the target folder. Download the war file and deploy the same locally in Tomcat server to access the application via: http://localhost:8080/WeatherForecast/.
 
 The application initially displays a home page and various cities of australia in the navigation menu bar at the top of the page. Click on each link to get the weather conditions of current date-time. If you want to specifically look for a date on which you need the forecast, enter the date in the textbox in format dd-MM-yyyy and click Get Forecast to get that day's forecast for the city now selected.
+
+Test Results:
+The test results are available as pdf file describing each screen result and respective screenshot present in the Test-Results-Screens.zip file.
